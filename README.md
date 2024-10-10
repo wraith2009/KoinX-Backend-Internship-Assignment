@@ -34,6 +34,15 @@ This project is a cryptocurrency price tracker that fetches and stores data for 
 **Query Parameters:**
 
 - `coin`: One of the following values: `bitcoin`, `matic-network`, `ethereum`.
+  **Response:**
+
+```json
+{
+  "price": 40000,
+  "marketCap": 800000000,
+  "24hChange": 3.4
+}
+```
 
 ![real time price](./assets/koinx1.jpg)
 
@@ -44,17 +53,17 @@ This project is a cryptocurrency price tracker that fetches and stores data for 
 **Query Parameters:**
 
 - `coin`: One of the following values: `bitcoin`, `matic-network`, `ethereum`.
-  ![deviation in price](./assets/koinx2.jpg)
-
-**Response:**
+  **Response:**
 
 ```json
 {
-  "price": 40000,
-  "marketCap": 800000000,
-  "24hChange": 3.4
+  "deviation": 20.5
 }
 ```
+
+![deviation in price](./assets/koinx2.jpg)
+
+````
 
 ## Setup Instructions
 
@@ -63,7 +72,7 @@ This project is a cryptocurrency price tracker that fetches and stores data for 
 ```terminal
 $ git clone https://github.com/wraith2009/KoinX-Backend-nodejs.git
 $ npm i
-```
+````
 
 ## project structure
 
