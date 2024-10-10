@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cron from "node-cron";
-import fetchCryptoData from "./controllers/fetchdata.controller.js";
+import fetchCryptoData from "./src/controllers/fetchdata.controller.js";
 
 dotenv.config();
 const app = express();
@@ -21,8 +21,8 @@ cron.schedule("0 */2 * * *", async (req, res) => {
 });
 
 // Routes
-import statsRouter from "./routes/stat.route.js";
-import deviationROuter from "./routes/deviation.route.js";
+import statsRouter from "./src/routes/stat.route.js";
+import deviationROuter from "./src/routes/deviation.route.js";
 app.use("/", statsRouter);
 app.use("/", deviationROuter);
 
